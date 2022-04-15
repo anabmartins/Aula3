@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>porcentagem de alunos</title>
+    <link rel="stylesheet" href="porcentagem.css">
+</head>
+<body>
+    <header>
+        <h2>Cálculo de distanciamento social</h2>
+    </header>
+       <div class="container">
+           <h3>Insira o total de alunos</h3>
+           <label class="valor">Alunos</label>
+           <br>
+           <input type="number" id="num">
+           <button type="button" id="botao" 
+           onclick="percentage_1()">=</button>
+        <br><br>
+        <label class="valor">Poderão participar</label>
+        <br>
+        <input type="number" id="resultado" readonly>
+        </div>
+        <footer>
+            <ul>
+                <li>Descubra o total de alunos que deve ter na sala de aula para garantir o distanciamento social!</li>
+                <li>Respeite as normas de segurança contra o COVID-19.</li>
+            </ul>
+        </footer>
+        <script type="text/javascript">
+            function percentage_1() {
+                resultado = document.getElementById('num').value;
+                var num = document.getElementById("num").value;
+                document.getElementById("resultado")
+        .value = (num / 100) * 30;
+            }
+        </script>
+</body>
+</html>

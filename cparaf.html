@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Clima</title>
+    <link rel="stylesheet" href="cpf.css">
+</head>
+<body>
+    <header>
+        <h1>Conversor de Celsius para Fahrenheit</h1>
+    </header>
+    <label class="celsius">C°</label>
+    <br>
+    <input type="number" id="celsius">
+    <br><br>
+    <button type="button" id="botao" onclick="converter()">Converter</button>
+    <br><br>
+    <label class="resultado">F°</label>
+    <br>
+    <input type="number"id="resultado" readonly>
+
+    <script type="text/javascript">
+        function converter() {
+           celsius = document.getElementById('celsius').value
+    
+            resultado = (parseFloat(celsius)*9/5) + 32;  
+            document.getElementById('resultado').value = resultado
+        }
+    
+    </script>
+</body>
+</html>

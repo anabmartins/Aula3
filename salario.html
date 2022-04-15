@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de salário</title>
+    <link rel="stylesheet" href="salario.css">
+</head>
+<body>
+    <header>
+        <h1>Cálculo do salário por horas trabalhadas</h1>
+    </header>
+<div>
+    <label class="horas">Quantidade de horas<label>
+        <br>
+        <input type="number" id="horas">
+        <br><br>
+        <label class="valor">Valor da hora</label>
+        <br>
+        <input type="number" id="valor">
+        <br><br>
+        <button type="button" id="botao" onclick="calcular()">Calcular</button> 
+        <br><br>
+        <label class="resultado">Salário</label>
+        <br>
+        <input type="salario" id="salario" readonly>
+</div>
+<footer>
+    <ul>
+        <li>Saiba quanto será o seu salário por horas trabalhadas.</li>
+        <li>Sua calculadora rápida de salário!</li>
+    </ul>
+</footer>
+
+<script type="text/javascript">
+    function calcular() {
+        horas = document.getElementById('horas').value
+        valor = document.getElementById('valor').value
+
+        salario = parseFloat(horas) * parseFloat(valor)
+        document.getElementById('salario').value = salario
+    }
+
+</script>
+
+</body>
+</html>
